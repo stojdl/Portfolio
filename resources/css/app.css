@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "mulish";
+    src: url("fonts/mulish/static/Mulish-Regular.ttf") format("truetype");
+}
+
+* {
+    @apply transition-colors duration-75 ease-in-out;
+    font-family: "mulish";
+}
