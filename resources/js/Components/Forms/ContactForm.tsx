@@ -23,7 +23,7 @@ const ContactForm = (props: FormProps) => {
     console.log("errors: ", errors);
     return (
         <form {...props} onSubmit={handleSubmit} className="space-y-4">
-            <div className="flex flex-col items-start space-y-2">
+            <div className="flex flex-col items-start space-y-2 md:flex-row md:space-y-0 md:space-x-4">
                 <TextInput
                     name="name"
                     value={data.name}

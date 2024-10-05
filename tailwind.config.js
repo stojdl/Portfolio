@@ -22,6 +22,7 @@ export default {
             backgroundImage: {
                 intrduction: "url('/images/backgrounds/introduction.png')",
                 contact: "url('/images/backgrounds/contact.png')",
+                contactForm: "url('/images/backgrounds/contact-form.png')",
             },
         },
     },
