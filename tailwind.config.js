@@ -18,6 +18,7 @@ export default {
             },
             fontFamily: {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],
+                Mulish: ["Mulish", "sans-serif"],
             },
             backgroundImage: {
                 intrduction: "url('/images/backgrounds/introduction.png')",
