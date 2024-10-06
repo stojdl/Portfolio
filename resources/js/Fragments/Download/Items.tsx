@@ -13,7 +13,7 @@ const Items = () => {
             <div className="w-full flex flex-col space-y-4 md:max-w-xl">
                 <DownloadTile>Strukturovaný životopis (CV)</DownloadTile>
                 <Divider
-                    heading="Kód obdržíte po domluvě"
+                    heading="Jednorázové heslo obdržíte po domluvě"
                     icon={<IoIosLock />}
                 />
                 <div className="flex flex-col space-y-2">
