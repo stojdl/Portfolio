@@ -13,7 +13,7 @@ const Info = () => {
             size="thin"
             className="space-y-16 bg-contactForm bg-cover md:bg-contain bg-no-repeat"
         >
-            <div className="w-full pb-2 space-y-2 sm:space-y-4 md:w-auto md:space-y-8 md:text-center md:px-4 md:border-l md:-ml-px bg-slate-100 dark:bg-slate-800 opacity-95">
+            <div className="w-full -mt-2 py-2 space-y-2 sm:space-y-4 md:w-auto md:space-y-8 md:text-center md:px-4 md:border-l border-slate-300 md:-ml-px backdrop-blur-sm">
                 <H2>{contact.heading}</H2>
                 <div className="max-w-xl">
                     <Paragraph>{contact.subheading}</Paragraph>
