@@ -19,12 +19,12 @@ const Info = () => {
                     <Paragraph>{contact.subheading}</Paragraph>
                 </div>
             </div>
-            <div className="w-full max-w-2xl lg:max-w-3xl px-2 py-4 md:px-4 lg:px-6 lg:py-3 md:py-2 border rounded  bg-slate-100 dark:bg-slate-800 opacity-95 drop-shadow-xl">
+            <div className="w-full max-w-2xl lg:max-w-3xl px-2 py-4 md:px-4 lg:px-6 lg:py-3 md:py-2 border border-slate-300 rounded bg-slate-100 dark:bg-slate-800 opacity-95 drop-shadow-xl">
                 <Contacts />
             </div>
             <div
                 id="kontaktni_formular"
-                className="relative w-full p-2 border text-center rounded md:p-4 md:max-w-2xl lg:max-w-4xl bg-slate-100 dark:bg-slate-800 opacity-95 drop-shadow-xl"
+                className="relative w-full p-2 border border-slate-300 text-center rounded md:p-4 md:max-w-2xl lg:max-w-4xl bg-slate-100 dark:bg-slate-800 opacity-95 drop-shadow-xl"
             >
                 <ContactForm />
             </div>
