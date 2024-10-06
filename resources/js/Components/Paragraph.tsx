@@ -1,7 +1,12 @@
-import { ReactNode } from "react";
+import { ParagraphProps } from "@/types/Paragraph";
 
-const Paragraph = ({ children }: { children: ReactNode }) => {
-    return <p className="text-justify">{children}</p>;
+const Paragraph = (props: ParagraphProps) => {
+    const { className, children } = props;
+    return (
+        <p {...props} className={`text-justify ${className}`}>
+            {children}
+        </p>
+    );
 };
 
 export default Paragraph;

@@ -18,10 +18,12 @@ export default {
             },
             fontFamily: {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],
+                Mulish: ["Mulish", "sans-serif"],
             },
             backgroundImage: {
                 intrduction: "url('/images/backgrounds/introduction.png')",
                 contact: "url('/images/backgrounds/contact.png')",
+                contactForm: "url('/images/backgrounds/contact-form.png')",
             },
         },
     },

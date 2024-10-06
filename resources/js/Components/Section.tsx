@@ -6,7 +6,7 @@ const Section = (props: SectionProps) => {
     const sizes = {
         thin: "sm:p-10 md:py-16",
         medium: "sm:px-10 sm:py-16 md:py-32",
-        thick: "sm:px-10 sm:py-16 md:py-32 2xl:py-48 ",
+        thick: "sm:px-10 sm:py-16 md:py-32 2xl:py-48",
     };
 
     return (

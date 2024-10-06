@@ -25,7 +25,9 @@ use App\Http\Middleware\Localization;
     
     Route::group(['prefix' => '/kontakt'], function () {
         Route::get('/', function () {
-            return Inertia::render('Contact');
+            return Inertia::render('Contact', [
+                "contact" => __('contact'),
+            ]);
         })->name('contact');
         Route::post('/send', [ContactController::class, 'send'])->name("send");
     });
