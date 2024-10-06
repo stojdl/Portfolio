@@ -12,7 +12,7 @@ const Layout = (props: LayoutProps) => {
 
     return (
         <div
-            className={`${darkmode || "dark"} bg-slate-100 dark:bg-slate-800 dark:text-neutral-200`}
+            className={`${darkmode || "dark"} bg-gradient-to-br from-slate-100 to-slate-300 dark:from-slate-800 dark:to-slate-900 dark:text-neutral-200`}
         >
             <Head title={title} />
 
