@@ -15,7 +15,9 @@ const Introduction = () => {
             className="relative space-y-16 2xl:space-y-32 md:bg-intrduction bg-contain bg-bottom bg-no-repeat"
         >
             <div className="space-y-2 sm:space-y-4 md:space-y-8 md:text-center">
-                <H1>{welcome.introduction.heading}</H1>
+                <H1 className="font-semibold">
+                    {welcome.introduction.heading}
+                </H1>
                 <H3>{welcome.introduction.subheading}</H3>
                 {/* <H1>Junior web developer</H1>
                 <H3>Poptávám spolupráci.</H3> */}

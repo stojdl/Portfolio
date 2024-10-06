@@ -4,25 +4,27 @@ import Paragraph from "@/Components/Paragraph";
 import Section from "@/Components/Section";
 import { usePage } from "@inertiajs/react";
 import Contacts from "@/SharedFragments.tsx/Contacts";
+import Image from "@/Components/Image";
 
 const Info = () => {
-    // console.log("info usePage(): ", usePage());
+    const { contact } = usePage<{ contact: any }>().props;
     return (
-        <Section size="thin" className="space-y-16">
-            <div className="w-full space-y-2 sm:space-y-4 md:w-auto md:space-y-8 md:text-center">
-                <H2>Máte zájem? Kontaktujte mě</H2>
-                <div className="max-w-lg">
-                    <Paragraph>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing
-                        elit. Nam quis nulla. Nam sed tellus id magna elementum
-                        tincidunt.
-                    </Paragraph>
+        <Section
+            size="thin"
+            className="space-y-16 bg-contactForm bg-cover md:bg-contain bg-no-repeat"
+        >
+            <div className="w-full pb-2 space-y-2 sm:space-y-4 md:w-auto md:space-y-8 md:text-center md:px-4 md:border-l md:-ml-px bg-slate-100 dark:bg-slate-800 opacity-95">
+                <H2>{contact.heading}</H2>
+                <div className="max-w-xl">
+                    <Paragraph>{contact.subheading}</Paragraph>
                 </div>
             </div>
-            <Contacts />
+            <div className="w-full max-w-2xl lg:max-w-3xl px-2 py-4 md:px-4 lg:px-6 lg:py-3 md:py-2 border border-slate-300 rounded bg-slate-100 dark:bg-slate-800 opacity-95 drop-shadow-xl">
+                <Contacts />
+            </div>
             <div
                 id="kontaktni_formular"
-                className="w-full p-2 border text-center rounded md:p-4 md:max-w-2xl lg:max-w-4xl"
+                className="relative w-full p-2 border border-slate-300 text-center rounded md:p-4 md:max-w-2xl lg:max-w-4xl bg-slate-100 dark:bg-slate-800 opacity-95 drop-shadow-xl"
             >
                 <ContactForm />
             </div>

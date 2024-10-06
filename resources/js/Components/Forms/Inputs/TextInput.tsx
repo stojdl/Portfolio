@@ -7,7 +7,7 @@ const TextInput = (props: TextInputProps) => {
             <input
                 type="text"
                 className={
-                    `w-full placeholder-neutral-500 dark:placeholder-neutral-200 dark:bg-neutral-700 border-none outline outline-1 rounded ${error && "outline-red-500"}` +
+                    `w-full placeholder-neutral-500 dark:placeholder-neutral-300 bg-slate-50 dark:bg-slate-700 border-none outline outline-1 outline-slate-400 rounded focus:ring-slate-500 dark:focus:ring-slate-100 ${error && "outline-red-500"}` +
                     className
                 }
                 {...props}
