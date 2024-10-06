@@ -10,7 +10,7 @@ const Divider = (props: DividerProps) => {
             {heading && (
                 <p className="pl-2 text-sm flex space-x-1 items-center">
                     {icon && icon}
-                    <span>{heading}</span>
+                    <span className="w-max">{heading}</span>
                 </p>
             )}
             <div className="w-full border-t" />
