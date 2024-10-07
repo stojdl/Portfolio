@@ -22,7 +22,6 @@ use App\Http\Middleware\Localization;
         })->name('projects.internal_paradigma');
     });
     
-    
     Route::group(['prefix' => '/kontakt'], function () {
         Route::get('/', function () {
             return Inertia::render('Contact', [
@@ -45,7 +44,7 @@ use App\Http\Middleware\Localization;
             return redirect(route('orders'));
         });
 
-        Route::get('/nabidky', function () {
+        Route::get('/nab', function () {
             return Inertia::render('Orders');
         })->name('orders');
 
