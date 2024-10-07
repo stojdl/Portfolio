@@ -44,7 +44,7 @@ use App\Http\Middleware\Localization;
             return redirect(route('orders'));
         });
 
-        Route::get('/nab', function () {
+        Route::get('/nabidky', function () {
             return Inertia::render('Orders');
         })->name('orders');
 
