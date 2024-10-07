@@ -4,7 +4,7 @@ import Section from "@/Components/Section";
 
 const Overview = () => {
     return (
-        <Section size="thin" className="space-y-8 md:space-y-8">
+        <Section size="thin" className="space-y-8">
             <div className="space-y-2 sm:space-y-4 md:space-y-8 md:text-center">
                 <H2>Overview placeholder heading</H2>
             </div>

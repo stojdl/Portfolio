@@ -14,7 +14,9 @@ export default {
         extend: {
             spacing: {
                 noNavScreen: "calc(100vh - 4rem)",
+                noFooterScreen: "calc(100vh - 16rem)",
                 noNavNoFooterScreen: "calc(100vh - 20rem)",
+                noSideMenu: "calc(100vw - 16rem)",
             },
             fontFamily: {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],

@@ -9,7 +9,7 @@ import { AppContext } from "@/Contexts/App";
 // icons
 import { FaHome } from "react-icons/fa";
 import { FaTools } from "react-icons/fa";
-import { LuLanguages } from "react-icons/lu";
+import { LuLanguages, LuLayoutDashboard } from "react-icons/lu";
 import { MdManageAccounts } from "react-icons/md";
 import { MdOutlineDarkMode } from "react-icons/md";
 import { MdOutlineLightMode } from "react-icons/md";
@@ -19,6 +19,7 @@ import { RiAccountCircleLine } from "react-icons/ri";
 import { CgMenuGridO } from "react-icons/cg";
 import { FaRegWindowClose } from "react-icons/fa";
 import Divider from "../Divider";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const Navbar = () => {
     const { auth, navigation } = usePage<{
@@ -105,6 +106,12 @@ const Navbar = () => {
                     <div className="mt-8 pl-4 w-full flex flex-col space-y-8 sm:pl-8">
                         {auth?.user ? (
                             <>
+                                <Link href={route("orders")}>
+                                    <p className="flex items-center space-x-2">
+                                        <LuLayoutDashboard />
+                                        <span>App -{">"}</span>
+                                    </p>
+                                </Link>
                                 <Link href={route("profile.edit")}>
                                     <p className="flex items-center space-x-2">
                                         <RiAccountCircleLine />
@@ -163,7 +170,7 @@ const Navbar = () => {
                             {darkmode ? "Lightmode" : "Darkmode"}
                         </Dropdown.Button>
                         <Divider
-                            className="text-neutral-500"
+                            className="text-neutral-500 dark:text-neutral-400"
                             heading="Jazyky"
                             icon={<LuLanguages />}
                         />
@@ -184,12 +191,20 @@ const Navbar = () => {
                             English
                         </Dropdown.Link>
                         <Divider
-                            className="text-neutral-500 "
+                            className="text-neutral-500 dark:text-neutral-400"
                             heading="Účet"
                             icon={<MdManageAccounts />}
                         />
                         {auth?.user ? (
                             <>
+                                <Dropdown.Link
+                                    href={route("orders")}
+                                    icon={<LuLayoutDashboard />}
+                                >
+                                    <span className="flex items-center space-x-2">
+                                        <span>App</span> <FaArrowRightLong />
+                                    </span>
+                                </Dropdown.Link>
                                 <Dropdown.Link
                                     href={route("profile.edit")}
                                     icon={<RiAccountCircleLine />}
