@@ -40,10 +40,20 @@ use App\Http\Middleware\Localization;
     });
 
 
+    Route::group(['prefix' => '/app', 'middleware' => 'auth'], function () {
+        Route::get('/', function () {
+            return redirect(route('orders'));
+        });
+
+        Route::get('/nabídky', function () {
+            return Inertia::render('Orders');
+        })->name('orders');
+
+        Route::get('/pristupove-klice', function () {
+            return Inertia::render('AccessKeys');
+        })->name('keys');
+    });
     
-    Route::get('/dashboard', function () {
-        return Inertia::render('Dashboard');
-    })->middleware(['auth', 'verified'])->name('dashboard');
     
     Route::middleware('auth')->group(function () {
         Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
