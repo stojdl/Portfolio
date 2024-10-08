@@ -8,5 +8,10 @@
         'account' => 'Účet',
         'login' => 'Přihlásit',
         'logout' => 'Odhlásit',
+        'footer' => [
+            'text' => 'Použité technologie',
+            'text2' => 'Vše v jednom Inertia projektu.',
+            'text3' => 'Hostováno na'
+        ]
     ];
 ?>

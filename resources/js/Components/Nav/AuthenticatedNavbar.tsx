@@ -42,14 +42,14 @@ const AuthenticatedNavbar = () => {
                 </div>
             )}
 
-            <nav className="hidden md:flex absolute flex-col justify-between h-screen w-64 bg-gradient-to-br from-slate-300 to-slate-400 dark:from-slate-900 dark:to-slate-950">
+            <nav className="hidden md:flex fixed flex-col justify-between h-screen w-64 bg-gradient-to-br from-slate-300 to-slate-400 dark:from-slate-900 dark:to-slate-950">
                 <div className="h-16 px-8 flex items-center">
                     <Link href={route("welcome")}>
                         <FaHome className="w-6 h-6" />
                     </Link>
                 </div>
                 <div className="px-8 flex flex-col space-y-8">
-                    <Link href={route("orders")}>
+                    <Link href={route("offers")}>
                         <p className="flex items-center space-x-2">
                             <MdOutlineLocalOffer className="w-6 h-6" />
                             <span>Nabídky</span>

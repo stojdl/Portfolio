@@ -27,6 +27,8 @@ const Navbar = () => {
         navigation: any;
     }>().props;
 
+    console.log("route", route(`${route().current()}`), route("projects"));
+
     const { darkmode, setDarkmode } = useContext(AppContext);
 
     const [isOpen, setOpen] = useState(false);
@@ -64,8 +66,17 @@ const Navbar = () => {
                     />
 
                     <div className="px-4 w-full flex flex-col justify-center space-y-8 text-xl font-bold tracking-wide sm:px-8">
-                        {Links.map((link) => (
-                            <Link href={link[1]}>{link[0]}</Link>
+                        {Links.map((link, i) => (
+                            <Link
+                                key={i}
+                                href={link[1]}
+                                className={`${
+                                    route(`${route().current()}`) == link[1] &&
+                                    "text-slate-800"
+                                }`}
+                            >
+                                {link[0]}
+                            </Link>
                         ))}
                     </div>
 
@@ -106,7 +117,7 @@ const Navbar = () => {
                     <div className="mt-8 pl-4 w-full flex flex-col space-y-8 sm:pl-8">
                         {auth?.user ? (
                             <>
-                                <Link href={route("orders")}>
+                                <Link href={route("offers")}>
                                     <p className="flex items-center space-x-2">
                                         <LuLayoutDashboard />
                                         <span>App -{">"}</span>
@@ -144,19 +155,30 @@ const Navbar = () => {
 
             <nav className="hidden md:flex fixed z-10 inset-0 h-16 p-8 justify-between items-center bg-slate-500 dark:bg-slate-900 text-white">
                 <div className="w-1/3">
-                    <Link href={route("welcome")}>
-                        <FaHome className="w-6 h-6" />
+                    <Link href={route("welcome")} className="w-max block">
+                        <FaHome className="w-6 h-6 hover:text-slate-300" />
                     </Link>
                 </div>
                 <div className="w-1/3 flex justify-center space-x-8 font-bold tracking-wide">
                     {Links.map((link, i) => (
-                        <Link key={i} href={link[1]}>
+                        <Link
+                            key={i}
+                            href={link[1]}
+                            className={`${
+                                route(`${route().current()}`) == link[1] &&
+                                "text-slate-300"
+                            } hover:text-slate-200`}
+                        >
                             {link[0]}
                         </Link>
                     ))}
                 </div>
                 <div className="w-1/3 flex justify-end space-x-4">
-                    <Dropdown trigger={<FaTools className="w-5 h-5" />}>
+                    <Dropdown
+                        trigger={
+                            <FaTools className="w-5 h-5 hover:text-slate-300" />
+                        }
+                    >
                         <Dropdown.Button
                             icon={
                                 darkmode ? (
@@ -198,7 +220,7 @@ const Navbar = () => {
                         {auth?.user ? (
                             <>
                                 <Dropdown.Link
-                                    href={route("orders")}
+                                    href={route("offers")}
                                     icon={<LuLayoutDashboard />}
                                 >
                                     <span className="flex items-center space-x-2">

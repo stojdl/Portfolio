@@ -15,7 +15,9 @@ use App\Http\Middleware\Localization;
 
     Route::group(['prefix' => '/projekty'], function () {
         Route::get('/', function () {
-            return Inertia::render('Projects/index');
+            return Inertia::render('Projects/index', [
+                "projects" => __('projects'),
+            ]);
         })->name('projects');
         Route::get('/internal_paradigma', function () {
             return Inertia::render('Projects/InternalParadigma');
@@ -45,8 +47,8 @@ use App\Http\Middleware\Localization;
         });
 
         Route::get('/nabidky', function () {
-            return Inertia::render('Orders');
-        })->name('orders');
+            return Inertia::render('Offers');
+        })->name('offers');
 
         Route::get('/pristupove-klice', function () {
             return Inertia::render('AccessKeys');
