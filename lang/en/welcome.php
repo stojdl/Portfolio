@@ -17,12 +17,16 @@
                               users."
         ],
         'about' => [
-        'heading' => 'I am ready to face challenges!',
-        'subheading' => 'I have experience with the basics of both frontend 
-                        and backend application development. However, in the 
-                        future, I would like to specialize in just one area - either 
-                        frontend or backend. In extreme cases, I am also capable 
-                        of working on both again.'
+            'heading' => 'I am ready to face challenges!',
+            'subheading' => 'I have experience with the basics of both frontend 
+                            and backend application development. However, in the 
+                            future, I would like to specialize in just one area - either 
+                            frontend or backend. In extreme cases, I am also capable 
+                            of working on both again.'
+        ],
+        'contact' => [
+            'heading' => 'Where to find me',
+            'link' => 'Contact me via form'
         ]
     ];
 ?>

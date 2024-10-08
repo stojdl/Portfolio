@@ -21,6 +21,10 @@
                              rád specializoval jen na jednu oblast - buď frontend 
                              a nebo backend. V krajním případě jsem ale schopný 
                              e věnovat opět obojímu.'
+        ],
+        'contact' => [
+            'heading' => 'Kam se mi ozvat',
+            'link' => 'Kontaktujte mě přes formulář'
         ]
     ];
 ?>
