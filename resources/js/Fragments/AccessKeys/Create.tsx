@@ -5,7 +5,7 @@ import { GiKey } from "react-icons/gi";
 
 const Create = () => {
     return (
-        <Section>
+        <Section size="thin">
             <div className="w-full flex px-4 sm:px-8 md:px-8 lg:px-16">
                 <H2>Vytvořit klíč</H2>
             </div>
