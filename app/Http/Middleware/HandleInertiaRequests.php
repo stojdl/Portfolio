@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Inertia\Middleware;
 use Illuminate\Foundation\Application;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\DB;
 
 class HandleInertiaRequests extends Middleware
 {
@@ -41,6 +42,7 @@ class HandleInertiaRequests extends Middleware
             // 'inertiaVersion' => Inertia::version(fn ()=> $version),
             'laravelVersion' => Application::VERSION,
             'phpVersion' => PHP_VERSION,
+            'mysqlVersion' => DB::scalar('select version()'),
             'navigation' => __('navigation'),
         ];
     }

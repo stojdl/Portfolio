@@ -3,12 +3,15 @@ import { version } from "react";
 import { devDependencies } from "../../../package.json";
 import Divider from "@/Components/Divider";
 import { LuLanguages } from "react-icons/lu";
-import { RiMenuSearchLine } from "react-icons/ri";
+import { RiMenuSearchLine, RiTailwindCssFill } from "react-icons/ri";
+import { FaExternalLinkAlt, FaReact, FaLaravel } from "react-icons/fa";
+import { DiMysql } from "react-icons/di";
 
 const Footer = () => {
-    const { laravelVersion, phpVersion, navigation } = usePage<{
+    const { laravelVersion, phpVersion, mysqlVersion, navigation } = usePage<{
         laravelVersion: string;
         phpVersion: string;
+        mysqlVersion: string;
         navigation: any;
     }>().props;
 
@@ -23,20 +26,46 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="h-64 px-4 flex justify-center items-center bg-slate-950 text-neutral-300 sm:p-10 md:px-0 md:py-16">
-            <div className="w-full flex justify-between md:max-w-lg lg:max-w-2xl">
-                <div className="w-1/2 md:w-1/3">
-                    {year}&nbsp;Bedřich Štojdl -
-                    <p>
-                        Laravel&nbsp;v
-                        {laravelVersion} (PHP&nbsp;v{phpVersion}),
+        <footer className="h-80 px-4 flex flex-col justify-center items-center bg-slate-950 text-neutral-300 sm:p-10 md:px-0 md:py-16">
+            <div className="w-full pb-4 flex justify-between border-b md:max-w-lg lg:max-w-2xl">
+                <div className="w-3/4 md:w-1/2">
+                    {navigation.footer.text}:
+                    <p className="italic flex items-center space-x-2">
+                        <FaLaravel />
+                        <span>
+                            Laravel&nbsp;v
+                            {laravelVersion} (PHP&nbsp;v{phpVersion}),
+                        </span>
                     </p>
-                    <p>React&nbsp;v{version},</p>{" "}
-                    <p>
-                        TailwindCSS&nbsp;v
-                        {tailwindVersion}
+                    <p className="italic flex items-center space-x-2">
+                        <FaReact />
+                        <span>React&nbsp;v{version},</span>
                     </p>
-                    <p>Vše v jednom Inertia projektu</p>
+                    <p className="italic flex items-center space-x-2">
+                        <RiTailwindCssFill />
+                        <span>
+                            TailwindCSS&nbsp;v
+                            {tailwindVersion},
+                        </span>
+                    </p>
+                    <p className="italic flex items-center space-x-2">
+                        <DiMysql />
+                        <span>
+                            MySQL&nbsp;v
+                            {mysqlVersion}.
+                        </span>
+                    </p>
+                    <p>{navigation.footer.text2}</p>
+                    <p className="flex items-center space-x-1">
+                        <span> {navigation.footer.text3}</span>
+                        <a
+                            href="https://www.heroku.com/home"
+                            className="flex items-center space-x-2 hover:underline"
+                        >
+                            <span>Heroku</span>
+                            <FaExternalLinkAlt className="w-3 h-3" />
+                        </a>
+                    </p>
                 </div>
                 <div className="w-1/3 flex flex-col items-end md:w-1/2 md:flex-row md:items-start md:space-x-8">
                     <div className="w-full flex flex-col space-y-1 items-end md:space-y-2">
@@ -73,6 +102,9 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+            <p className="w-full py-2 md:max-w-lg lg:max-w-2xl">
+                Bedřich Štojdl ({year})
+            </p>
         </footer>
     );
 };
