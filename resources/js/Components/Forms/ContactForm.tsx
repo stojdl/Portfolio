@@ -50,8 +50,10 @@ const ContactForm = (props: FormProps) => {
                     error={errors.content}
                 />
             </div>
-            <div>
-                <Submit disabled={processing}>{contact.form.submit}</Submit>
+            <div className="w-full flex justify-center">
+                <Submit disabled={processing} arrow>
+                    {contact.form.submit}
+                </Submit>
             </div>
         </form>
     );

@@ -24,6 +24,7 @@
         ],
         'contact' => [
             'heading' => 'Kam se mi ozvat',
+            'text' => 'Nebo',
             'link' => 'Kontaktujte mě přes formulář'
         ]
     ];

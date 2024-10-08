@@ -26,6 +26,7 @@
         ],
         'contact' => [
             'heading' => 'Where to find me',
+            'text' => 'Or',
             'link' => 'Contact me via form'
         ]
     ];

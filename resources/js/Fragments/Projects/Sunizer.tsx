@@ -19,7 +19,7 @@ const Sunizer = () => {
 
                 <Paragraph>{projects.sunizer.paragraph}</Paragraph>
                 <Paragraph>{projects.sunizer.paragraph2}</Paragraph>
-                <Anchor href={"https://sunizer.cz/"}>
+                <Anchor href={"https://sunizer.cz/"} arrow>
                     {projects.sunizer.link}
                 </Anchor>
             </div>

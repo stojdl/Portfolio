@@ -1,3 +1,6 @@
-import { AnchorHTMLAttributes } from "react";
+import { AnchorHTMLAttributes, ReactNode } from "react";
 
-export interface AnchorProps extends AnchorHTMLAttributes<HTMLAnchorElement> {}
+export interface AnchorProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+    icon?: ReactNode;
+    arrow?: boolean;
+}
