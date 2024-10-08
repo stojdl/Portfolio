@@ -2,12 +2,13 @@ import { FormProps } from "@/types/Form";
 
 import Submit from "./Buttons/Submit";
 import TextInput from "./Inputs/TextInput";
-import { useForm } from "@inertiajs/react";
+import { useForm, usePage } from "@inertiajs/react";
 import { FormEvent } from "react";
 import Textarea from "./Inputs/Textarea";
-import { error } from "console";
 
 const ContactForm = (props: FormProps) => {
+    const { contact } = usePage<{ contact: any }>().props;
+
     const { data, setData, post, errors, processing } = useForm({
         name: "",
         email: "",
@@ -19,8 +20,8 @@ const ContactForm = (props: FormProps) => {
         post(route("send"));
     };
 
-    console.log("data: ", data);
-    console.log("errors: ", errors);
+    // console.log("data: ", data);
+    // console.log("errors: ", errors);
     return (
         <form {...props} onSubmit={handleSubmit} className="space-y-4">
             <div className="flex flex-col items-start space-y-2 md:flex-row md:space-y-0 md:space-x-4">
@@ -28,7 +29,7 @@ const ContactForm = (props: FormProps) => {
                     name="name"
                     value={data.name}
                     onChange={(e) => setData("name", e.target.value)}
-                    placeholder="Jméno nebo název firmy"
+                    placeholder={contact.form.name}
                     error={errors.name}
                 />
                 <TextInput
@@ -45,12 +46,12 @@ const ContactForm = (props: FormProps) => {
                     name="content"
                     value={data.content}
                     onChange={(e) => setData("content", e.target.value)}
-                    placeholder="Vaše nabídka..."
+                    placeholder={contact.form.offer}
                     error={errors.content}
                 />
             </div>
             <div>
-                <Submit disabled={processing}>Odeslat nabídku -{">"}</Submit>
+                <Submit disabled={processing}>{contact.form.submit}</Submit>
             </div>
         </form>
     );
