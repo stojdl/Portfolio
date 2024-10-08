@@ -106,7 +106,7 @@ const Navbar = () => {
                     <div className="mt-8 pl-4 w-full flex flex-col space-y-8 sm:pl-8">
                         {auth?.user ? (
                             <>
-                                <Link href={route("orders")}>
+                                <Link href={route("offers")}>
                                     <p className="flex items-center space-x-2">
                                         <LuLayoutDashboard />
                                         <span>App -{">"}</span>
@@ -198,7 +198,7 @@ const Navbar = () => {
                         {auth?.user ? (
                             <>
                                 <Dropdown.Link
-                                    href={route("orders")}
+                                    href={route("offers")}
                                     icon={<LuLayoutDashboard />}
                                 >
                                     <span className="flex items-center space-x-2">

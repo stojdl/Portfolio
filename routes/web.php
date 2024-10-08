@@ -45,8 +45,8 @@ use App\Http\Middleware\Localization;
         });
 
         Route::get('/nabidky', function () {
-            return Inertia::render('Orders');
-        })->name('orders');
+            return Inertia::render('Offers');
+        })->name('offers');
 
         Route::get('/pristupove-klice', function () {
             return Inertia::render('AccessKeys');

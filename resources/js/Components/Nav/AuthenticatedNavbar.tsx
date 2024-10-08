@@ -49,7 +49,7 @@ const AuthenticatedNavbar = () => {
                     </Link>
                 </div>
                 <div className="px-8 flex flex-col space-y-8">
-                    <Link href={route("orders")}>
+                    <Link href={route("offers")}>
                         <p className="flex items-center space-x-2">
                             <MdOutlineLocalOffer className="w-6 h-6" />
                             <span>Nabídky</span>
