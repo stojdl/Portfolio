@@ -15,7 +15,9 @@ use App\Http\Middleware\Localization;
 
     Route::group(['prefix' => '/projekty'], function () {
         Route::get('/', function () {
-            return Inertia::render('Projects/index');
+            return Inertia::render('Projects/index', [
+                "projects" => __('projects'),
+            ]);
         })->name('projects');
         Route::get('/internal_paradigma', function () {
             return Inertia::render('Projects/InternalParadigma');
