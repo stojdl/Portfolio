@@ -19,8 +19,14 @@ const PdgmInternal = () => {
 
                 <Paragraph>{projects.paradigma.paragraph}</Paragraph>
                 <Paragraph>{projects.paradigma.paragraph2}</Paragraph>
-                <LinkButton href={route("projects.internal_paradigma")} arrow>
-                    {projects.paradigma.link}
+                <LinkButton
+                    // href={route("projects.internal_paradigma")}
+                    href="#"
+                    arrow
+                    disabled
+                >
+                    {projects.paradigma.link}{" "}
+                    <span className="italic">[not ready yet]</span>
                 </LinkButton>
             </div>
             <div className="md:w-full md:max-w-xl lg:max-w-xl lg:hover:scale-110 transition-transform duration-200">

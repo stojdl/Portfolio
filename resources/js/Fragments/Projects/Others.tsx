@@ -11,16 +11,18 @@ const Others = () => {
             <div className="space-y-2 sm:space-y-4 md:space-y-8 md:text-center">
                 <H2>{projects.others.heading}</H2>
             </div>
-
             <div className="md:max-w-lg lg:max-w-2xl">
                 <Paragraph>{projects.others.paragraph}</Paragraph>
             </div>
-            {/* <div className="md:max-w-lg lg:max-w-2xl">
-                <Paragraph>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    Nam quis nulla. Nam sed tellus id magna elementum tincidunt.
-                </Paragraph>
-            </div> */}
+            <div className="md:max-w-lg lg:max-w-2xl">
+                <Paragraph>{projects.others.paragraph2}</Paragraph>
+            </div>{" "}
+            <div className="md:max-w-lg lg:max-w-2xl">
+                <Paragraph>{projects.others.paragraph3}</Paragraph>
+            </div>{" "}
+            <div className="md:max-w-lg lg:max-w-2xl">
+                <Paragraph>{projects.others.paragraph4}</Paragraph>
+            </div>
         </Section>
     );
 };
