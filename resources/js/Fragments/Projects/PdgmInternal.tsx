@@ -25,7 +25,8 @@ const PdgmInternal = () => {
                     arrow
                     disabled
                 >
-                    {projects.paradigma.link}
+                    {projects.paradigma.link}{" "}
+                    <span className="italic">[not ready yet]</span>
                 </LinkButton>
             </div>
             <div className="md:w-full md:max-w-xl lg:max-w-xl lg:hover:scale-110 transition-transform duration-200">

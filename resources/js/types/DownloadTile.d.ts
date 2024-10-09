@@ -4,4 +4,5 @@ import { AnchorHTMLAttributes } from "react";
 export interface DownloadTileProps
     extends AnchorHTMLAttributes<HTMLAnchorElement> {
     locked?: boolean;
+    disabled?: boolean;
 }
