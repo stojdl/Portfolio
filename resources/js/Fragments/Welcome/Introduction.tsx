@@ -12,7 +12,7 @@ const Introduction = () => {
     return (
         <Section
             size="thick"
-            className="relative space-y-16 2xl:space-y-32 md:bg-intrduction bg-contain bg-bottom bg-no-repeat"
+            className="relative space-y-16 2xl:space-y-32 md:bg-introduction bg-contain 2xl:bg-introductionXL 3xl:bg-contain bg-bottom bg-no-repeat"
         >
             <div className="space-y-2 sm:space-y-4 md:space-y-8 md:text-center">
                 <H1 className="font-semibold">
