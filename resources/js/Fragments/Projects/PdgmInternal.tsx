@@ -19,7 +19,12 @@ const PdgmInternal = () => {
 
                 <Paragraph>{projects.paradigma.paragraph}</Paragraph>
                 <Paragraph>{projects.paradigma.paragraph2}</Paragraph>
-                <LinkButton href={route("projects.internal_paradigma")} arrow>
+                <LinkButton
+                    // href={route("projects.internal_paradigma")}
+                    href="#"
+                    arrow
+                    disabled
+                >
                     {projects.paradigma.link}
                 </LinkButton>
             </div>
