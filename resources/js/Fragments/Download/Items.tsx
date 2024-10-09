@@ -12,11 +12,7 @@ const Items = () => {
         <Section size="thin" className="space-y-8">
             <H2>{download.heading}</H2>
             <div className="w-full flex flex-col space-y-4 md:max-w-xl">
-                <DownloadTile
-                    href={route("download.resume")}
-                    method="post"
-                    as="button"
-                >
+                <DownloadTile href="/downloads/CV-stojdl.pdf" download>
                     {download.resume} (CV)
                 </DownloadTile>
                 <Divider heading={download.divider} icon={<IoIosLock />} />

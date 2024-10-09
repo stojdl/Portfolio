@@ -42,7 +42,7 @@ use App\Models\Offer;
                 'download' => __('download'),
             ]);
         })->name('download');
-        Route::post('/CV', [DownloadController::class, 'resume'])->name("download.resume");
+        Route::get('/CV', [DownloadController::class, 'resume'])->name("download.resume");
     });
 
 
