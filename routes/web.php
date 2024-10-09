@@ -37,7 +37,9 @@ use App\Models\Offer;
 
     Route::group(['prefix' => '/ke-stazeni'], function () {
         Route::get('/', function () {
-            return Inertia::render('Download');
+            return Inertia::render('Download', [
+                'download' => __('download'),
+            ]);
         })->name('download');
         // Route::post('/send', [ContactController::class, 'send'])->name("send");
     });
