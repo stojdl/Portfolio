@@ -1,5 +1,5 @@
-import { HtmlHTMLAttributes } from "react";
+import { InertiaLinkProps } from "@inertiajs/react";
 
-export interface DownloadTileProps extends HtmlHTMLAttributes<HTMLDivElement> {
+export interface DownloadTileProps extends InertiaLinkProps {
     locked?: boolean;
 }

@@ -2,10 +2,13 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\LocalizationController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Middleware\Localization;
+use App\Http\Resources\OfferResource;
+use App\Models\Offer;
 
     Route::get('/', function () {
         return Inertia::render('Welcome', [
@@ -27,17 +30,19 @@ use App\Http\Middleware\Localization;
     Route::group(['prefix' => '/kontakt'], function () {
         Route::get('/', function () {
             return Inertia::render('Contact', [
-                "contact" => __('contact'),
+                'contact' => __('contact'),
             ]);
         })->name('contact');
-        Route::post('/send', [ContactController::class, 'send'])->name("send");
+        Route::post('/send', [ContactController::class, 'send'])->name('send');
     });
 
     Route::group(['prefix' => '/ke-stazeni'], function () {
         Route::get('/', function () {
-            return Inertia::render('Download');
+            return Inertia::render('Download', [
+                'download' => __('download'),
+            ]);
         })->name('download');
-        // Route::post('/send', [ContactController::class, 'send'])->name("send");
+        Route::post('/CV', [DownloadController::class, 'resume'])->name("download.resume");
     });
 
 
@@ -47,7 +52,9 @@ use App\Http\Middleware\Localization;
         });
 
         Route::get('/nabidky', function () {
-            return Inertia::render('Offers');
+            return Inertia::render('Offers', [
+                'offers' => OfferResource::collection(Offer::all()),
+            ]);
         })->name('offers');
 
         Route::get('/pristupove-klice', function () {
