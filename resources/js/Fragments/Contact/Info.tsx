@@ -11,7 +11,7 @@ const Info = () => {
     return (
         <Section
             size="thin"
-            className="space-y-16 bg-contactForm bg-cover md:bg-contain bg-no-repeat"
+            className="min-h-noNavNoFooterScreen space-y-16 bg-contactForm bg-cover md:bg-contain 3xl: bg-no-repeat"
         >
             <div className="w-full pb-2 space-y-2 sm:space-y-4 md:w-auto md:space-y-8 md:text-center md:px-4 md:border-l border-slate-300 md:-ml-px backdrop-blur-sm">
                 <H2>{contact.heading}</H2>

@@ -13,7 +13,7 @@ const Section = (props: SectionProps) => {
         <section
             {...props}
             className={
-                `px-4 py-12 flex flex-col md:px-0 md:items-center ` +
+                `w-full px-4 py-12 flex flex-col md:px-0 md:items-center ` +
                 sizes[size] +
                 " " +
                 className

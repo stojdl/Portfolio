@@ -12,10 +12,13 @@ export default {
 
     theme: {
         extend: {
+            screens: {
+                "3xl": "1921px",
+            },
             spacing: {
                 noNavScreen: "calc(100vh - 4rem)",
-                noFooterScreen: "calc(100vh - 16rem)",
-                noNavNoFooterScreen: "calc(100vh - 20rem)",
+                noFooterScreen: "calc(100vh - 20rem)",
+                noNavNoFooterScreen: "calc(100vh - 24rem)",
                 noSideMenu: "calc(100vw - 16rem)",
             },
             fontFamily: {
@@ -23,7 +26,9 @@ export default {
                 Mulish: ["Mulish", "sans-serif"],
             },
             backgroundImage: {
-                intrduction: "url('/images/backgrounds/introduction.png')",
+                introduction: "url('/images/backgrounds/introduction.png')",
+                introductionXL:
+                    "url('/images/backgrounds/introduction-xl.png')",
                 contact: "url('/images/backgrounds/contact.png')",
                 contactForm: "url('/images/backgrounds/contact-form.png')",
             },
