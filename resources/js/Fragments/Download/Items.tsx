@@ -10,15 +10,21 @@ const Items = () => {
 
     return (
         <Section size="thin" className="space-y-8">
-            <H2>{download.heading}</H2>{" "}
+            <H2>{download.heading}</H2>
             <div className="w-full flex flex-col space-y-4 md:max-w-xl">
-                <DownloadTile>{download.resume} (CV)</DownloadTile>
+                <DownloadTile
+                    href={route("download.resume")}
+                    method="post"
+                    as="button"
+                >
+                    {download.resume} (CV)
+                </DownloadTile>
                 <Divider heading={download.divider} icon={<IoIosLock />} />
                 <div className="flex flex-col space-y-2">
-                    <DownloadTile locked>
+                    <DownloadTile href="" locked>
                         Sunizer ({download.code})
                     </DownloadTile>
-                    <DownloadTile locked>
+                    <DownloadTile href="" locked>
                         Internal Paradigma ({download.code})
                     </DownloadTile>
                 </div>

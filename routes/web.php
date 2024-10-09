@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\LocalizationController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -41,7 +42,7 @@ use App\Models\Offer;
                 'download' => __('download'),
             ]);
         })->name('download');
-        // Route::post('/send', [ContactController::class, 'send'])->name("send");
+        Route::post('/CV', [DownloadController::class, 'resume'])->name("download.resume");
     });
 
 
