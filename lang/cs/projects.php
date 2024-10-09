@@ -5,7 +5,7 @@
             "paragraph" => "Uplynulo několik let a když se otočím, mohu vidět 
                             spoustu věcí, co se mi zdařili ale i naopak. Člověku
                             se nemůže povést vše, ale ze všeho by se měl učit. Za
-                            zmínku ale určitě projekty, které se podařily a dotáhly
+                            zmínku stojí ale určitě projekty, které se podařily a dotáhly
                             do konce."
         ],
         "sunizer" => [
@@ -58,7 +58,7 @@
                              používal balíček Styled components. Projekt jsem deploynul přes 
                              Vercel a defakto po několika měsíční práci mi po zveřejnění našel
                              zaměstnání za jednu noc.",
-            "paragraph4" => "Moji předchozí zaměstnavatelé si mě osvoji zprvu pro Next.js,
+            "paragraph4" => "Moji předchozí zaměstnavatelé si mě osvojili zprvu pro Next.js,
                              následně mě naučili pracovat v Laravelu. Bavíme se stále ale o
                              základech. Nemyslím si, že jsem pokročilý, maximálně pokročilý
                              začátečník. Můj první projekt u té firmy byl prezentační onepage,
