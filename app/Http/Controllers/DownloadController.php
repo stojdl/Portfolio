@@ -12,6 +12,7 @@ class DownloadController extends Controller
         if (!file_exists($path)) {
             abort(404); // Pokud soubor neexistuje, vrátí 404
         }
+        //dd($path);
         return response()->download($path);
     }
 }

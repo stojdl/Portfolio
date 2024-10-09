@@ -7,7 +7,7 @@ import { RiLockPasswordLine } from "react-icons/ri";
 const DownloadTile = (props: DownloadTileProps) => {
     const { children, locked = false } = props;
     return (
-        <Link
+        <a
             {...props}
             className="w-full px-2 py-4 flex justify-between items-center border rounded drop-shadow-lg bg-slate-200 hover:bg-slate-300 dark:bg-slate-700 dark:hover:bg-slate-600"
         >
@@ -16,7 +16,7 @@ const DownloadTile = (props: DownloadTileProps) => {
                 {locked && <IoIosLock className="w-6 h-6" />}
                 <IoDownloadOutline className="w-6 h-6" />
             </div>
-        </Link>
+        </a>
     );
 };
 
