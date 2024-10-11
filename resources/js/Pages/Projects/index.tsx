@@ -8,11 +8,12 @@ import Layout from "@/Layouts";
 export default function Projects() {
     return (
         <Layout title="Projekty">
-            <Overview />
+            {/* <Overview />
             <Sunizer />
             <PdgmInternal />
             <LMS />
-            <Others />
+            <Others /> */}{" "}
+            odebráno z duvodu obchodnich tajemství
         </Layout>
     );
 }
