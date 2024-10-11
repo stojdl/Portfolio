@@ -9,9 +9,10 @@ export default function Projects() {
     return (
         <Layout title="Projekty">
             <Overview />
-            <Sunizer />
+            odebráno z duvodu obchodnich tajemství{" "}
+            {/* <Sunizer />
             <PdgmInternal />
-            <LMS />
+            <LMS />*/}{" "}
             <Others />
         </Layout>
     );
