@@ -12,8 +12,9 @@ const Items = () => {
         <Section size="thin" className="space-y-8">
             <H2>{download.heading}</H2>
             <div className="w-full flex flex-col space-y-4 md:max-w-xl">
-                <DownloadTile href="/downloads/CV-stojdl.pdf" target="blank">
-                    {download.resume} (CV)
+                <DownloadTile href="" target="blank">
+                    {/* <DownloadTile href="/downloads/CV-stojdl.pdf" target="blank"> */}
+                    {download.resume} (CV) (dočasně odebráno)
                 </DownloadTile>
                 <Divider heading={download.divider} icon={<IoIosLock />} />
                 <div className="flex flex-col space-y-2">
